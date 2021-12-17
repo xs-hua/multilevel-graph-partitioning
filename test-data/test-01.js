@@ -1,0 +1,47 @@
+export const data =  {
+    "vertices": [
+        {"id": 0, "property": {}},
+        {"id": 1, "property": {}},
+        {"id": 2, "property": {}},
+        {"id": 3, "property": {}},
+        {"id": 4, "property": {}},
+        {"id": 5, "property": {}}, 
+        {"id": 6, "property": {}},
+        {"id": 7, "property": {}},
+        {"id": 8, "property": {}},
+        {"id": 9, "property": {}},
+        {"id": 10, "property": {}},
+        {"id": 11, "property": {}}
+        
+    ],
+    "edges": [
+        {"sour": 0, "dest": 11, "property":{}},
+        {"sour": 11, "dest": 0, "property":{}},
+        {"sour": 0, "dest": 10, "property":{}},
+        {"sour": 0, "dest": 9, "property":{}},
+        {"sour": 0, "dest": 1, "property":{}},
+        {"sour": 1, "dest": 2, "property":{}},
+        {"sour": 1, "dest": 3, "property":{}},
+        {"sour": 1, "dest": 5, "property":{}},
+        {"sour": 2, "dest": 5, "property":{}},
+        {"sour": 2, "dest": 4, "property":{}},
+        {"sour": 5, "dest": 4, "property":{}},
+        {"sour": 4, "dest": 8, "property":{}},
+        {"sour": 4, "dest": 7, "property":{}},
+        {"sour": 5, "dest": 7, "property":{}},
+        {"sour": 7, "dest": 8, "property":{}},
+        {"sour": 9, "dest": 8, "property":{}},
+        {"sour": 7, "dest": 9, "property":{}},
+        {"sour": 3, "dest": 5, "property":{}},
+        {"sour": 5, "dest": 6, "property":{}},
+        {"sour": 3, "dest": 6, "property":{}},
+        {"sour": 6, "dest": 7, "property":{}},
+        {"sour": 10, "dest": 7, "property":{}},
+        {"sour": 9, "dest": 10, "property":{}},
+        {"sour": 6, "dest": 10, "property":{}},
+        {"sour": 11, "dest": 9, "property":{}},
+        {"sour": 11, "dest": 1, "property":{}},
+        {"sour": 11, "dest": 2, "property":{}},
+        {"sour": 11, "dest": 3, "property":{}}  
+    ]
+};

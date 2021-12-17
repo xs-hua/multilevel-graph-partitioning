@@ -1,0 +1,21 @@
+{
+  "name": "multilevel-graph-partitioning",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "",
+  "main": "edge.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xs-hua/multilevel-graph-partitioning.git"
+  },
+  "keywords": [],
+  "author": "Xinshu Hua",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xs-hua/multilevel-graph-partitioning/issues"
+  },
+  "homepage": "https://github.com/xs-hua/multilevel-graph-partitioning#readme"
+}

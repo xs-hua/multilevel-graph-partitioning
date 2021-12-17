@@ -6,6 +6,12 @@ This repository implements **Multilevel Graph Partition** algorithm proposed in 
 *Reference:* G. Karypis and V. Kumar, “Multilevel Graph Partitioning Schemes,” in ICPP, 1995.
 
 
+Convention: airbnb code convention
+style: clean code
+multilevel: implemented with adapter pattern
+test: with mochajs
+
+
 **Steps:** 
 1. Coarsening
 2. Partitioning

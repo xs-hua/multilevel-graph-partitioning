@@ -26,10 +26,7 @@ class KlUncoarsenExecutor extends UncoarsenExecutor {
         let vertices = group_a.concat(group_b);
 
 
-        //
-        console.log("BEFORE-KL");
-        console.log(vertices);
-        //
+        
 
         let edge_cut_total_max_last;
 
@@ -100,11 +97,11 @@ class KlUncoarsenExecutor extends UncoarsenExecutor {
                 for(let i=0; i<max_index; i++){
                     for(let ii=0; ii<vertices.length; ii++){
                         if(vertices[ii].id == vertices_edge_cuts[i][0][0].id){
-                            console.log("shift "+vertices[ii].id+" to B");
+                            //console.log("shift "+vertices[ii].id+" to B");
                             vertices[ii].label = "B";
                         }
                         else if(vertices[ii].id == vertices_edge_cuts[i][0][1].id){
-                            console.log("shift "+vertices[ii].id+" to A");
+                            //console.log("shift "+vertices[ii].id+" to A");
                             vertices[ii].label = "A";
                         }
                     }

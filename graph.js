@@ -83,6 +83,59 @@ class Graph {
         return d_value;
     }
 
+    /**
+     * 
+     * @param {*} vertex_x 
+     * @param {*} vertex_y 
+     * @returns 
+     */
+     check_vertices_conneted(vertex_x, vertex_y){
+        let is_connected = false;
+        
+        for(let i=0; i<this.edges.length; i++){
+            if(
+                (vertex_x.id==this.edges[i].sour_vertex_id && vertex_y.id==this.edges[i].dest_vertex_id) || 
+                (vertex_y.id==this.edges[i].sour_vertex_id && vertex_x.id==this.edges[i].dest_vertex_id)
+            ){
+                is_connected=true;
+            }
+        }
+        return is_connected;
+    }
+
+
+
+    match_sub_vertices(vertex_a, vertex_b){
+        if(this.check_vertices_conneted(vertex_a, vertex_b)){
+            return true;
+        }else{
+            for(let s_v of vertex_a.sub_vertices){
+                if(this.check_vertices_conneted(s_v, vertex_b)){
+                    return true;
+                }else{
+                    for(let v of vertex_b.sub_vertices){
+                        if(this.check_vertices_conneted(s_v, v))
+                            return true;
+                    }
+                    return false;
+                }
+            }
+    }
+    }
+
+    find_sour_v_edges(vertices){
+
+        let e_list = [];
+        let vid_list = vertices.map(v => v.id);
+        
+        for(let e of this.edges){
+            if(vid_list.includes(e.sour_vertex_id))
+                e_list.push(e);
+        }
+
+        return e_list;
+    }
+
 }
 
 
