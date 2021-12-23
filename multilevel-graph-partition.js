@@ -1,8 +1,5 @@
 import { Graph } from "./graph.js";
 
-
-
-
 class MultilevelGraphPartition {
 
     //implements with Adapter Pattern
@@ -33,8 +30,8 @@ class MultilevelGraphPartition {
             }        
         }
 
-        let e_a = graph.find_sour_v_edges(v_a);
-        let e_b = graph.find_sour_v_edges(v_b);
+        let e_a = multi_g.find_sour_v_edges(v_a);
+        let e_b = multi_g.find_sour_v_edges(v_b);
 
         return [new Graph(v_a, e_a), new Graph(v_b, e_b)];
     }

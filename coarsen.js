@@ -11,11 +11,6 @@ class CoarsenExecutor {
     }
 }
 
-
-
-
-
-
 class RandomMatchCoarsenExecutor extends CoarsenExecutor {
 
     execute_coarsen(graph){

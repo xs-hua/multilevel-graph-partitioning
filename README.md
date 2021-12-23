@@ -10,7 +10,7 @@ Convention: airbnb code convention
 style: clean code
 multilevel: implemented with adapter pattern
 test: with mochajs
-
+TODO: ADD VISU PICS FOR EACH STEP
 
 **Steps:** 
 1. Coarsening

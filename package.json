@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/xs-hua/multilevel-graph-partitioning/issues"
   },
-  "homepage": "https://github.com/xs-hua/multilevel-graph-partitioning#readme"
+  "homepage": "https://github.com/xs-hua/multilevel-graph-partitioning#readme",
+  "dependencies": {
+    "mongoose": "^6.1.2"
+  }
 }
