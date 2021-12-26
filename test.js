@@ -18,35 +18,18 @@ for(let e of data.edges){
 let graph = new Graph(vertices, edges);
 
 
-//console.log("BEFORE HANDLING: ---------------------------");
-//console.log(vertices);
-//console.log(edges);
+console.log("BEFORE HANDLING: ---------------------------");
+console.log(vertices);
+console.log(edges);
 
-//console.log("AFTER HANDLING: ---------------------------");  
+console.log("AFTER HANDLING: ---------------------------");  
 let vs = [...graph.vertices];
-let g_a = [];
-let g_b = [];//
-        
-let vertices_middle_index = Math.floor(vs.length/2);
-//set first half of vertices with label 'A' 
-for(let i=0; i<vertices_middle_index; i++){
-    g_a.push(vs[i]);  
-}
-//set second half of vertice with label 'B'
-for(let i=vertices_middle_index; i<vs.length; i++){
-    g_b.push(vs[i]);   
-}
-
-//console.log(vertices[0]);
-
 let exe_c = new RandomMatchCoarsenExecutor();
-//console.log(exe_c);
 let exe_p = new GgpGraphPartition();
 let exe_u = new KlUncoarsenExecutor();
 let exe_multi = new MultilevelGraphPartition(exe_c, exe_p, exe_u);
 let result_multi = exe_multi.execute_partitioning(graph);
-
-
+console.log(result_multi);
 
 
 /*
