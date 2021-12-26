@@ -1,5 +1,4 @@
 
-
 class Graph {
 
     /**
@@ -20,7 +19,21 @@ class Graph {
             return v;
     }
 
-    
+    static find_connect_edges(v_a, v_b, edges) {
+
+      let connect_edges = [];
+      let v_a_id = v_a.map(v => v.id);
+      let v_b_id = v_b.map(v => v.id);
+
+      for (let e of edges) {
+        if (v_a_id.includes(e.sour_vertex_id) && v_b_id.includes(e.dest_vertex_id)){
+          connect_edges.push(e);
+        }else if (v_a_id.includes(e.dest_vertex_id) && v_b_id.includes(e.sour_vertex_id)){
+          connect_edges.push(e);
+        }
+      }
+      return connect_edges;
+    }
 
     /**
      * 
@@ -135,6 +148,8 @@ class Graph {
 
         return e_list;
     }
+
+
 
 }
 

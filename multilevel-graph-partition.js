@@ -30,10 +30,17 @@ class MultilevelGraphPartition {
             }        
         }
 
+        //allocate edges to two parts according to its sour vertex id
         let e_a = multi_g.find_sour_v_edges(v_a);
         let e_b = multi_g.find_sour_v_edges(v_b);
 
-        return [new Graph(v_a, e_a), new Graph(v_b, e_b)];
+        //find edges which connect two graphs
+        let connect_edges = Graph.find_connect_edges(v_a, v_b, multi_g.edges);
+
+        let e_a_filter = e_a.filter( e => !connect_edges.includes(e) );
+        let e_b_filter = e_b.filter( e => !connect_edges.includes(e) );
+
+        return [new Graph(v_a, e_a_filter), new Graph(v_b, e_b_filter), connect_edges];
     }
 
     exe_coarsen(graph){
@@ -50,15 +57,7 @@ class MultilevelGraphPartition {
         return this.uncoarsen_executor(graph, two_graphs[0], two_graphs[1]);
     }
 
-    
-
-
 }
-
-
-
-
-
 
 export {MultilevelGraphPartition}
 

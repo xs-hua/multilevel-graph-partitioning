@@ -5,14 +5,7 @@ This repository implements **Multilevel Graph Partition** algorithm proposed in 
 
 *Reference:* G. Karypis and V. Kumar, “Multilevel Graph Partitioning Schemes,” in ICPP, 1995.
 
-
-Convention: airbnb code convention
-style: clean code
-multilevel: implemented with adapter pattern
-test: with mochajs
-TODO: ADD VISU PICS FOR EACH STEP
-
-**Steps:** 
+**Three steps of Multilevel Graph Partition:** 
 1. Coarsening
 2. Partitioning
 3. Uncoarsening
@@ -20,35 +13,34 @@ TODO: ADD VISU PICS FOR EACH STEP
 **Coarsening can be obtained by followings:**
 - Matching
 - Max-matching
-    - Random matching
+    - Random matching **__this one is selected by my approach__**
         - Heavy Edge Matching(HEM)
         - Light Edge Matching(LEM)
-    - Heavy Clique Matching(HCM)?????
+    - Heavy Clique Matching(HCM)
 
-**Partitioning by followings:**
-- Spectral Bisection(SB) [33, 2, 18]
-- geometric bisection [28]
-- combinatorial methods [25, 8, 9]
-- Graph Growing Algorithm(GGP)
+**Partition step can be achieved by one of followings:**
+- Spectral Bisection(SB) 
+- geometric bisection 
+- combinatorial methods
+- Graph Growing Algorithm(GGP) **__this one is selected by my approach__**
+    1. randomly select a vertex v
+    2. grow a region around v in breath-first strategy until half of vertex-weight included
 - Greedy Graph Growing Algorithm(GGGP)
 
-**Uncoarsening by followings:**
-- Kernighan-Lin(KL): Fiduccia-Mattheyses(FM)??????
+**Uncoarsen step can be achieved by one of followings:**
+- Kernighan-Lin(KL) **__this one is selected by my approach__**
 - Greedy Refinement
 - Boundary Refinement
 
-**Spectral bisection**
+--- -- - - --
 
+**Coarsen example, red line for edge merged from multiple edges**
 
-**Graph growing heuristics**
-1. randomly select a vertex v
-2. grow a region around v in breath-first strategy until half of vertex-weight included
+<img src="./img/before-coarsen.png" height="300px"> <img width="50px"> <img src="./img/after-coarsen.png">
 
+**Uncoarsen example, relocate red node into the other group**
 
-**k-way partition**
-- via recursive bisection in order to achieve sets of subgraph with k vertices
-
-
+<img src="./img/before-uncoarsen.png" height="300px"> <img width="50px"> <img src="./img/after-uncoarsen.png" height="300px">
 
 
 
