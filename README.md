@@ -3,8 +3,6 @@
 
 This repository implements **Multilevel Graph Partition** algorithm proposed in [Multilevel Graph Partitioning Schemes](https://www.researchgate.net/publication/221085380_Multilevel_Graph_Partitioning_Schemes)
 
-*Reference:* G. Karypis and V. Kumar, “Multilevel Graph Partitioning Schemes,” in ICPP, 1995.
-
 **Three steps of Multilevel Graph Partition:** 
 1. Coarsening
 2. Partitioning
@@ -40,7 +38,7 @@ This repository implements **Multilevel Graph Partition** algorithm proposed in 
 
 **Uncoarsen example, relocate red node into the other group**
 
-<img src="./img/before-uncoarsen.png" height="300px"> <img width="50px"> <img src="./img/after-uncoarsen.png" height="300px">
+<img src="./img/before-uncoarsen.png"> <img width="50px"> <img src="./img/after-uncoarsen.png" >
 
 
 
