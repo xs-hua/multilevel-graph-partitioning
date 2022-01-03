@@ -34,11 +34,11 @@ This repository implements **Multilevel Graph Partition** algorithm proposed in 
 
 **Coarsen example, red line for edge merged from multiple edges**
 
-<img src="./img/before-coarsen.png" height="300px"> <img width="50px"> <img src="./img/after-coarsen.png">
+<img src="./img/before-coarsen.png" height="300px">  <img src="./img/after-coarsen.png">
 
-**Uncoarsen example, relocate red node into the other group**
+**Uncoarsen example, relocate red/blue node into the other group**
 
-<img src="./img/before-uncoarsen.png"> <img width="50px"> <img src="./img/after-uncoarsen.png" >
+<img src="./img/before-uncor.png" height="200px" width="300px"> <img width="50px"> <img src="./img/after-uncor.png" height="200px" width="300px">
 
 
 
